@@ -202,6 +202,25 @@ resource "helm_release" "nginx-ingress" {
 }
 
 ```
+# Run Demo 
+
+  ```sh
+kubectl apply -f aks-helloworld-one.yaml --namespace nginx-ingress
+kubectl apply -f aks-helloworld-two.yaml --namespace nginx-ingress
+
+```
+
+#  Create ingress route
+
+  ```sh
+kubectl apply -f hello-world-ingress.yaml
+
+ingress.networking.k8s.io/hello-world-ingress created
+ingress.networking.k8s.io/hello-world-ingress-static created
+
+```
+
+
 # Demo
 
 http://52.224.78.42
