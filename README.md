@@ -204,7 +204,7 @@ resource "helm_release" "nginx-ingress" {
 ```
 # Demo
 
-
+http://52.224.78.42
 
 License.
 ----
