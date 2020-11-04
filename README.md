@@ -206,6 +206,8 @@ resource "helm_release" "nginx-ingress" {
 
 http://52.224.78.42
 
+http://52.224.78.42/hello-world-two
+
 License.
 ----
 MIT
