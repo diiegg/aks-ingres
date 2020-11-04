@@ -8,7 +8,7 @@ The following resources are created:
  - Basic Kubernetes cluster
  - Vnet
  - Nginx ingress controller
- - 
+ 
 ![enter image description here](https://user-images.githubusercontent.com/12648295/98110796-8bd7c200-1e97-11eb-8116-1ab6cc55a525.png)
    
 ## Requisites
