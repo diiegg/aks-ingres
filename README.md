@@ -203,22 +203,34 @@ resource "helm_release" "nginx-ingress" {
 
 ```
 
-# Run Demo 
+# Get Nginx services
 
-  ```sh
-kubectl apply -f aks-helloworld-one.yaml --namespace nginx-ingress
-kubectl apply -f aks-helloworld-two.yaml --namespace nginx-ingress
+  ```sh
+kubectl --namespace kubectl --namespace nginx-ingress get services get services
 
+NAME                            TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)                      AGE
+aks-helloworld-one              ClusterIP      10.0.60.37     <none>         80/TCP                       29m
+aks-helloworld-two              ClusterIP      10.0.131.116   <none>         80/TCP                       28m
+nginx-ingress-controller        LoadBalancer   10.0.192.226   52.224.78.42   80:31255/TCP,443:30367/TCP   3h4m
+nginx-ingress-default-backend   ClusterIP      10.0.41.253    <none>         80/TCP                       3h4m
 ```
 
-#  Create ingress route
+## Run demo
 
-  ```sh
+
+  ```sh
+kubectl apply -f aks-helloworld-one.yaml --namespace nginx-ingress
+kubectl apply -f aks-helloworld-two.yaml --namespace nginx-ingress
+```
+
+## Create Ingress Route
+
+
+  ```sh
 kubectl apply -f hello-world-ingress.yaml
 
 ingress.networking.k8s.io/hello-world-ingress created
 ingress.networking.k8s.io/hello-world-ingress-static created
-
 ```
 
 
